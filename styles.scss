@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+    margin-top: 8px;
+    background: url('./images/_ee8476a8-3b8e-4e5c-964e-f1af2b0c908c.jpeg') no-repeat center center fixed;
+    opacity: 10.7; 
+    background-size: cover;
+
+    &, td {
+        font: 25px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    }
+}
+
+.logo {
+    grid-column: 2;
+    height: 200px;
+    opacity: 1; 
+}
+
+header {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+nav {
+    grid-column: 2;
+    background-color: rgba(51, 161, 222, 0.7);
+    text-align: center;
+    padding: 0.5rem 0;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    li {
+        display: inline;
+        margin-right: 20px;
+    }
+    a {
+        text-decoration: none;
+        color: rgb(238, 191, 191);
+        font-weight: bold;
+        font-size: 30px; 
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    }
+#home.tab-content {
+        background-color: #000000; 
+        font-weight: bold;
+        padding: 28px; 
+        text-align: center;
+        color: #000000; 
+    }
+
+.tab-content {
+    background: url('./images/_ee8476a8-3b8e-4e5c-964e-f1af2b0c908c.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    display: block;
+    padding: 25px;
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+    background-color: #353636;
+    border: 5px solid #0a0a0a;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.news-article {
+    display: block;
+    padding: 20px;
+    background-color: rgba(230, 233, 236, 0.7); 
+    border: 1px solid #030303;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
