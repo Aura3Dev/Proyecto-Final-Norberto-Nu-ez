@@ -1,27 +1,24 @@
 
 $primary-color: #33a1de;
 $background-image: url('./images/_ee8476a8-3b8e-4e5c-964e-f1af2b0c908c.jpeg');
-$dark-background-color: #000000;
-$dark-text-color: #FFFFFF;
-$light-background-color: #353636;
-$light-text-color: #0C0C0C;
-$transparent-background-color: rgba(230, 233, 236, 0.7);
 
 
-@mixin custom-font($size: 25px) {
-    font: $size "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+@mixin large-font($size: 30px) {
+    font-size: $size;
 }
 
-body, td {
+body {
     margin: 0;
     padding: 0;
     margin-bottom: 15px;
     margin-top: 8px;
     background: $background-image no-repeat center center fixed;
-    opacity: 10.7;
+    opacity: 0.85;
     background-size: cover;
 
-    @include custom-font;
+    &, td {
+        font: 25px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    }
 }
 
 .logo {
@@ -34,41 +31,46 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+
+    img {
+        max-width: 100%;
+    }
 }
 
 nav {
     grid-column: 2;
-    background-color: rgba(51, 161, 222, 0.7);
+    background-color: $primary-color;
     text-align: center;
     padding: 0.5rem 0;
 
-ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-li {
-    display: inline;
-    margin-right: 20px;
-
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    li {
+        display: inline;
+        margin-right: 20px;
+    }
     a {
+        @include large-font;
         text-decoration: none;
-        color: $dark-text-color;
+        color: #eee;
         font-weight: bold;
-        font-size: 30px;
-        border-radius: 5px;
+        border-radius: 10px;
         margin-bottom: 20px;
     }
-    }
-}
 }
 
 #home.tab-content {
-    background-color: $dark-background-color;
     font-weight: bold;
     padding: 28px;
     text-align: center;
-    color: $dark-text-color;
+    color: #000000;
 }
 
 .tab-content {
@@ -77,9 +79,9 @@ li {
     display: block;
     padding: 25px;
     text-decoration: none;
-    color: $light-text-color;
-    background-color: $light-background-color;
-    border: 5px solid #0a0a0a;
+    color: #000000;
+    background-color: #000000;
+    border: 10px solid #0a0a0a;
     border-radius: 5px;
     margin-bottom: 20px;
     text-align: center;
@@ -88,9 +90,8 @@ li {
 .news-article {
     display: block;
     padding: 20px;
-    background-color: $transparent-background-color;
-    border: 1px solid #030303;
-    border-radius: 5px;
+    border: 3px solid #030303;
+    border-radius: 10px;
     margin-bottom: 20px;
     text-align: center;
 }
